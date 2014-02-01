@@ -1,0 +1,27 @@
+@(content: String, serverColor: String)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Front End Result Page</title>
+        <style>
+        pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+        </style>
+    </head>
+    <body>
+    		<div style="background-color: @{serverColor}; height: 50px; font-size: 1.5em; font-weight: bold; color: white;">
+    			Response came from the @serverColor server
+    		</div>
+
+    		<pre>
+        		@content
+      		</pre>
+    </body>
+</html>
